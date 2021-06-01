@@ -12,6 +12,7 @@ import pdb
 import datetime
 import telegram
 import requests
+import telegram_message as tm
 from win32com.client import Dispatch
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -97,4 +98,8 @@ driver = webdriver.Chrome('c:\\chromedriver\\chromedriver.exe', chrome_options=c
 # while True:
 driver.get('https://finance.naver.com/item/main.nhn?code=003490')
 	
-print(driver.find_elements_by_css_selector('p.no_today')[0].text)
+stock = int(driver.find_element_by_css_selector('p.no_today').text.replace('\n','').replace(',',''))
+
+if stock >= 30000:
+	tm.get_message(stock)
+
