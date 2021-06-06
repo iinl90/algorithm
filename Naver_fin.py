@@ -102,4 +102,3 @@ stock = int(driver.find_element_by_css_selector('p.no_today').text.replace('\n',
 
 if stock >= 30000:
 	tm.get_message(stock)
-
