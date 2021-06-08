@@ -12,3 +12,6 @@
 
 ## 210602 telegram_message.py , Naver_fin.py
 telegram_message.py를 함수화하여 Naver_fin.py에서 호출하고 내가 원하는 주가 이상이 되면 메세지를 보낸다.
+
+## 210608 camping_check.py
+셀레니움을 이용해 캠핑장 예약상태를 크롤링한다.
